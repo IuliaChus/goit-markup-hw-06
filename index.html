@@ -56,11 +56,35 @@
                <p class="button-text">Заказать услугу</p> </button> 
                <div class="backdrop is-hidden" data-modal > 
                 <div class="modal">
+                    
                 <button class="close-button" data-modal-close > 
                 <svg class="x" width="11" height="11">
                 <use href="./img/buttonclose.svg#icon-closebutton"></use>
                 </svg>
                 </button>
+                <div  class="modal-desk"> 
+                    <p>Оставьте свои данные, мы вам перезвоним</p>
+                    <div class="form-filed">
+                    <label for="name" class="modal-label">Имя</label>
+                    <input type="name" name="name" id="name" placeholder="" autocomplete="off"></div>
+                    <div class="form-filed">
+                    <label for="phone" class="modal-label">Телефон</label>
+                    <input type="tel" name="phone_number" id="phone" autocomplete="off"></div>
+                    <div class="form-filed">
+                    <label for="mail" class="modal-label" autocomplete="off">Почта</label>
+                    <input type="email" name="mail" id="mail"></div>
+                    <div class="form-filed">
+                    <label for="comment" class="modal-label">Комментарий</label>
+                    <textarea class="textarea" name="comment" id="comment" cols="" rows="">Введите текст</textarea></div>
+                
+                <div role="group" class="modal-checkbox">
+                    <input type="checkbox" name="checkbox" id="checkbox" class="checkbox">
+                    <label for="checkbox" class="checkbox">Соглашаюсь с рассылкой и принимаю <span> <a href="">Условия договора</a></span> </label>
+                    </div>
+                    
+                    <div class="modal-submit">
+                    <button class="modal-buttom">Отправить</button></div>
+                </div>
                 </div>
             </div>
         
@@ -377,21 +401,21 @@
     <!-- Подвал -->
     <footer class="footer-bg">
         <div class="container foot"> 
-            <div class="footer">
-        <p class="footer-logo">Web<span class="footer-logo-studio" >Studio</span> </p>
+         <div class="footer">
+             <p class="footer-logo">Web<span class="footer-logo-studio" >Studio</span> </p>
      
-        <address class="adress">   
-        <p class="street">г. Киев, пр-т Леси Украинки, 26 </p> 
+            <address class="adress">   
+            <p class="street">г. Киев, пр-т Леси Украинки, 26 </p> 
    
-         <ul class="contacts">
+             <ul class="contacts">
              <li class="footer-item" >
                 <a class="footer-email" href="mailto:info@example.com">info@example.com</a></li>
              <li class="footer-item">   
-                 <a class="footer-tel"  href="tel:+380991111111">+38 099 111 11 11</a></li>
+                <a class="footer-tel"  href="tel:+380991111111">+38 099 111 11 11</a></li>
 
         </ul>
         </address>
-    </div> 
+         </div> 
         <div class=" footer-box">
             <h2 class="join"> ПРИСОЕДИНЯЙТЕСЬ </h2>
             <ul class="footer-socialmedia">
@@ -433,10 +457,31 @@
                 </li>
             </ul>
         </div>
+        <div class="footer" >
+            <h2 class="subscription">Подпишитесь на рассылку</h2>
+          
+           <ul class="footer-socialmedia">
+            <li>
+               <form class="form">
+                   <label for="mail">  </label> 
+                   <input  type="email" name="mail" id="mail"
+                   placeholder="Email"> 
+               </form>
+            </li>
+        <li>
+            <button type="submit" class="subscription-bottom"> Подписаться 
+                <svg class="icon-send" width="30" height="30">
+                    <use href="./img/icon-send.svg#icon-icon-send"></use>
+                </svg>
+            </button>
+        </li>
+        </ul>
+        </div>
         </div>
     </footer>
   
     
     <script src="./js/modal.js"></script>
+
 </body>
 </html>
