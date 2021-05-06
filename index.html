@@ -64,22 +64,65 @@
                 </button>
                 <div  class="modal-desk"> 
                     <p>Оставьте свои данные, мы вам перезвоним</p>
-                    <div class="form-filed">
+                    <div class="form-filed" >
+                        <input type="name" 
+                        class="form-input"
+                        name="name" 
+                        id="name" 
+                        placeholder="" 
+                        autocomplete="off">
                     <label for="name" class="modal-label">Имя</label>
-                    <input type="name" name="name" id="name" placeholder="" autocomplete="off"></div>
+                    
+                    <span class="modal-icon">
+                        <svg width="12" height="12">
+                            <use href="./img/modalbox.svg#icon-name-pic"></use>
+                        </svg>
+                    </span> 
+                       
+                </div>
                     <div class="form-filed">
+                    
+                    <input type="tel" 
+                    class="form-input"
+                    name="phone_number" 
+                    id="phone" 
+                    autocomplete="off">
                     <label for="phone" class="modal-label">Телефон</label>
-                    <input type="tel" name="phone_number" id="phone" autocomplete="off"></div>
+                    <span class="modal-icon">
+                        <svg width="12" height="12">
+                            <use href="./img/modalbox.svg#icon-phone-pic"></use>
+                        </svg>
+                    </span> 
+
+                </div>
                     <div class="form-filed">
+                        <input type="email"
+                        class="form-input" 
+                        name="mail" 
+                        id="mail">
                     <label for="mail" class="modal-label" autocomplete="off">Почта</label>
-                    <input type="email" name="mail" id="mail"></div>
+                    <span class="modal-icon">
+                        <svg width="12" height="12">
+                            <use href="./img/modalbox.svg#icon-letter-pic"></use>
+                        </svg>
+                    </span> 
+                </div>
                     <div class="form-filed">
                     <label for="comment" class="modal-label">Комментарий</label>
-                    <textarea class="textarea" name="comment" id="comment" cols="" rows="">Введите текст</textarea></div>
+                    <textarea class="textarea" name="comment" id="comment" cols="" rows="" autocomplete="off">Введите текст</textarea></div>
                 
                 <div role="group" class="modal-checkbox">
-                    <input type="checkbox" name="checkbox" id="checkbox" class="checkbox">
+                    <input type="checkbox" 
+                    name="checkbox" 
+                    id="checkbox" 
+                    class="checkbox">
+                    <span class="submit">
+                        <svg width="11" height="8">
+                            <use href="./img/checkbox-pic.svg#icon-checkbox"></use>
+                        </svg>
+                    </span>
                     <label for="checkbox" class="checkbox">Соглашаюсь с рассылкой и принимаю <span> <a href="">Условия договора</a></span> </label>
+     
                     </div>
                     
                     <div class="modal-submit">
