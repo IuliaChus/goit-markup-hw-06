@@ -99,7 +99,8 @@
                         <input type="email"
                         class="form-input" 
                         name="mail" 
-                        id="mail">
+                        id="mail"
+                        autocomplete="off">
                     <label for="mail" class="modal-label" autocomplete="off">Почта</label>
                     <span class="modal-icon">
                         <svg width="12" height="12">
@@ -109,26 +110,25 @@
                 </div>
                     <div class="form-filed">
                     <label for="comment" class="modal-label">Комментарий</label>
-                    <textarea class="textarea" name="comment" id="comment" cols="" rows="" autocomplete="off">Введите текст</textarea></div>
+                    <textarea class="textarea" name="comment" id="comment" cols="" rows="" 
+                    placeholder="Введите текст"></textarea>
+                </div>
                 
-                <div role="group" class="modal-checkbox">
-                    <input type="checkbox" 
-                    name="checkbox" 
-                    id="checkbox" 
-                    class="checkbox">
-                    <span class="submit">
-                        <svg width="11" height="8">
-                            <use href="./img/checkbox-pic.svg#icon-checkbox"></use>
-                        </svg>
-                    </span>
-                    <label for="checkbox" class="checkbox">Соглашаюсь с рассылкой и принимаю <span> <a href="">Условия договора</a></span> </label>
      
-                    </div>
-                    
-                    <div class="modal-submit">
-                    <button class="modal-buttom">Отправить</button></div>
-                </div>
-                </div>
+                
+                    <label for="checkbox" class="checkbox-label"> 
+                        <input type="checkbox" 
+                        name="checkbox" 
+                        id="checkbox" 
+                        class="checkbox"> 
+                        <span class="submit-icon">
+                            
+                        </span>Соглашаюсь с рассылкой и принимаю <span> <a href=""> Условия договора</a></span> </label>
+    
+                    <span class="submit"></span>
+                    <button class="check-button" >
+                        Отправить</button>
+            
             </div>
         
                
@@ -508,7 +508,7 @@
                <form class="form">
                    <label for="mail">  </label> 
                    <input  type="email" name="mail" id="mail"
-                   placeholder="Email"> 
+                   placeholder="Email" autocomplete="off"> 
                </form>
             </li>
         <li>

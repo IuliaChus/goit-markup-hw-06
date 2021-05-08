@@ -83,6 +83,8 @@
     display: block;
     padding-top: 32px;
     padding-bottom: 32px;
+    transition-property: background-color;
+    transition-duration: 250ms;
     }
     
     .nav-link::after{
@@ -97,7 +99,7 @@
     border-radius: 2px;
        
     opacity: 0;
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     .nav-link-active{
@@ -125,20 +127,19 @@
     background-color: #2196F3;
     border-radius: 2px;      
     opacity: 1;
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     .nav-link:hover,
     .nav-link:focus{
     color: var(--accent-color);
     display: block;
+    transition:  250ms cubic-bezier(0.4, 0, 0.2, 1) ;
     }
     .nav-link:hover::after{
     opacity: 1;
     }
     
-   
-  
     .nav-contacts{
     display: flex;
     align-items: center;
@@ -157,6 +158,8 @@
     padding-right: 25px;
     display: inline-flex;
     align-items: center;
+    transition-property: background-color;
+    transition-duration: 250ms;
     }
     .contacts-mail:hover svg,
     .contacts-mail:focus svg{
@@ -165,6 +168,7 @@
     .contacts-mail:hover,
     .contacts-mail:focus{
     color: #2196F3;
+    transition:  250ms cubic-bezier(0.4, 0, 0.2, 1) ;
     }
     
     .letter{
@@ -174,6 +178,8 @@
     margin-right: 10px;
     fill: #757575;
     cursor: pointer;
+    transition-property: fill;
+    transition-duration: 250ms;
     }
      
     .contacts-tel{  
@@ -186,11 +192,14 @@
     letter-spacing: 0.02em; 
     display: inline-flex;
     align-items: center;
+    transition-property: background-color;
+    transition-duration: 250ms;
     }
       
     .contacts-tel:hover,
     .contacts-tel:focus{
     color:var(--accent-color);
+    transition:  250ms cubic-bezier(0.4, 0, 0.2, 1) ;
     }
     .contacts-tel:hover svg,
     .contacts-tel:focus svg{
@@ -203,6 +212,8 @@
     margin-right: 10px;
     fill: #757575;
     cursor: pointer;
+    transition-property: fill;
+    transition-duration: 250ms;
     }
        
        /*  HERO */
@@ -267,18 +278,19 @@
 
 
 .backdrop{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width:100%;
-    height: 100%;
-    background-color:rgba(0, 0, 0, 0.2);
+position: fixed;
+top: 0;
+left: 0;
+width:100%;
+height: 100%;
+background-color:rgba(0, 0, 0, 0.2);
+z-index: 1;
 }
     
 .backdrop.is-hidden {
-    visibility: hidden;
-    opacity: 0;
-    pointer-events: none;
+visibility: hidden;
+opacity: 0;
+pointer-events: none;
 }  
 .modal{
 position:absolute;
@@ -303,19 +315,23 @@ padding-top: 10px;
 padding-bottom: 4px;
 }
 .close-button{
-    position: fixed;
-    top: 0;
-    right:0;
-    margin: 8px;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background: #FFFFFF;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    cursor: pointer;
+position: fixed;
+top: 0;
+right:0;
+margin: 8px;
+width: 30px;
+height: 30px;
+border-radius: 50%;
+background: #FFFFFF;
+border: 1px solid rgba(0, 0, 0, 0.1);
+cursor: pointer;
+transition-property: fill;
+transition-duration: 250ms;
 }
-.close-button:hover{
-    fill: var(--accent-color);
+.close-button:hover,
+.close-button:focus{
+fill: var(--accent-color);
+transition:  250ms cubic-bezier(0.4, 0, 0.2, 1) ;
 }
 .modal-desk{
 width: 448px;
@@ -333,8 +349,10 @@ flex-direction: column;
 color: var(--accent-color);
 text-decoration: underline;
 }
+.form-filed input:active{
+    border-color: var(--accent-color);
+}
 .modal-desk p{
-padding-top: 40px;
 font-family: Roboto;
 font-style: normal;
 font-weight: 700;
@@ -343,14 +361,17 @@ line-height: 1.5;
 text-align: center;
 letter-spacing: 0.03em;
 color: #212121;
-margin-bottom: 30px;
+padding-bottom: 32px;
 }
 .modal-desk input{
 border: 1px solid rgba(33, 33, 33, 0.2);
 box-sizing: border-box;
 border-radius: 4px;
-
 }
+.form-input:active{
+    border: none;
+}
+
 .textarea{
 resize: none;
 width: 448px;
@@ -364,66 +385,94 @@ font-weight: normal;
 font-size: 14px;
 line-height: 1.14;
 letter-spacing: 0.01em;
-color: rgba(117, 117, 117, 0.5);
+color: rgba(117, 117, 117, 1);
 padding: 12px 16px;
+outline: var(--accent-color);
 }
 .textarea:hover{
     border: 1px solid var(--accent-color);
 }
-.checkbox{  
+.textarea::placeholder{
+    color:  rgba(117, 117, 117, 0.5);
+}
+
+.checkbox-label{ 
 position: relative;
-text-align: center;
-font-family: Roboto;
-font-style: normal;
-font-weight: normal;
 font-size: 14px;
 line-height: 24px;
 letter-spacing: 0.03em;
 color: #757575;   
+display: flex;
+align-items: center;
 padding-top: 20px;
 padding-bottom: 30px;
+padding-left: 10px;
 }
 
-.modal-checkbox a{
+.checkbox-label a{
 color: var(--accent-color);
 text-decoration: underline;
+padding-left: 5px;
 }
-.modal-submit{
-margin-left: 110px ;
-
-  
+.checkbox{
+appearance: none;
+position: absolute;
 }
-.modal-buttom{
+.submit-icon{
+display: inline-block;
+width: 16px;
+height: 15px;
+margin-right: 9px;
+border-radius: 4px;
+border: 2px solid #2a2a2a;
+transition-property: fill;
+transition-duration: 250ms;
 
+}
+.checkbox:checked + .submit-icon{
+border-color: #2196F3;
+background-color: #2196F3;
+background-image: url(/img/submit.svg);
+background-size: contain;
+background-repeat: no-repeat;
+align-items: center;
+background-origin: border-box;
+transition:  250ms cubic-bezier(0.4, 0, 0.2, 1) ;
+}
+.check-button{
+display: inline-block;
+align-items: center;
 width: 200px;
 height: 50px;
-color: var(--primary-white-color);
-background: #2196F3;
+background: #188CE8;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+border-radius: 4px;
+color: #fff;
 border: none;
-margin-left: 16px;
-margin-right: 16px;
+margin-left: 120px;
+margin-right: 120px;
 cursor: pointer;
 }
-.modal-checkbox{
-position: relative;
-display: inline-block;
-text-align: center;
-padding-top: 20px;
-padding-bottom: 30px;
-}
+
 .form-input{
 margin-bottom: 20px;
 width: 448px;
 height: 40px;
+padding-left: 40px ;
 border: 1px solid rgba(33, 33, 33, 0.2);
 box-sizing: border-box;
 border-radius: 4px;
 cursor: pointer;
+transition-property: fill;
+transition-duration: 250ms;
+outline: var(--accent-color);
 }
-/* .form-input:hover{
+.form-input:hover,
+.form-input:focus{
     border: 1px solid var(--accent-color);
-} */
+    fill: #2196F3;
+    transition:  250ms cubic-bezier(0.4, 0, 0.2, 1) ;
+}
 .modal-icon{
 position: absolute;
 top: 20%;
@@ -431,14 +480,14 @@ left: 19px;
 display: inline-block;
 width: 20px;
 height: 20px;
-
+transition-property: fill;
+transition-duration: 250ms;
 }
-/* .form-filed:hover{
-fill: var(--accent-color);  
-} */
-.form-filed:focus-within .modal-icon{
+.form-filed:focus-within,
+.form-filed:hover .modal-icon{
     color: var(--accent-color);
     fill: var(--accent-color);
+    transition:  250ms cubic-bezier(0.4, 0, 0.2, 1) ;
 }
 
 
@@ -654,21 +703,29 @@ background: rgba(47, 48, 58, 0.8);
     width: 20px;
     height: 20px;
     fill: #AFB1B8;
+    transition-property: fill;
+    transition-duration: 250ms;
     }
     .twitter{
     width: 20px;
     height: 20px;
     fill: #AFB1B8;
+    transition-property: fill;
+    transition-duration: 250ms;
     }
     .facebook{
     width: 20px;
     height: 20px;
     fill: #AFB1B8;
+    transition-property: fill;
+    transition-duration: 250ms;
     }
     .linkedin{
     width: 20px;
     height: 20px;
     fill: #AFB1B8;
+    transition-property: fill;
+    transition-duration: 250ms;
     }
     
     .link{
@@ -760,12 +817,15 @@ background: rgba(47, 48, 58, 0.8);
     color: #AFB1B8;
     background-color: #fff; 
     margin-right: 30px;
+    transition-property: background-color;
+    transition-duration: 250ms;
     }
     
     .logo-box:hover,
     .logo-box:focus{
     border: 1px solid #2196F3;
     cursor: pointer;
+    transition:  250ms cubic-bezier(0.4, 0, 0.2, 1) ;
     }
     .logo-box:last-child{
     margin-right: 0px;
@@ -773,6 +833,7 @@ background: rgba(47, 48, 58, 0.8);
     .logo-box:hover svg,
     .logo-box:focus svg{
     fill: #2196F3;
+    transition:  250ms cubic-bezier(0.4, 0, 0.2, 1) ;
     }
     .client-logo{
     display: block;
@@ -906,11 +967,14 @@ width: 44px;
 height: 44px;
 align-items: center;
 justify-content: center;
+border-radius: 50%;
+transition-property: background-color;
+transition-duration: 250ms;
 }
 .footer-fb:hover,
 .footer-fb:focus{
 background-color: #2196F3;
-border-radius: 50%;
+transition:  250ms cubic-bezier(0.4, 0, 0.2, 1) ;
 }
 .footer-fb:hover svg,
 .footer-fb:focus svg{
@@ -979,4 +1043,5 @@ align-items: center;
     padding-top: 15px;
     padding-left: 15px; 
     padding-bottom: 15px;
+    outline:none;
 }
