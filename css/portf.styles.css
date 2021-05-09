@@ -392,7 +392,6 @@ padding-bottom: 20px;
     }
     .footer{
     display: inline-block;
-    margin-right: 70px;
     align-items: center;
     }
     .footer-logo{
@@ -477,6 +476,7 @@ padding-bottom: 20px;
     width: 206px;
     padding: 0px;
     margin-right: 93px;
+    margin-left: 70px;
     }
     .foot{
     display: flex;
