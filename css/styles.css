@@ -435,7 +435,7 @@ background-image: url(../img/submit.svg);
 .checkbox:checked + .submit-icon{
 border-color: #2196F3;
 background-color: #2196F3;
-background-image: url(/img/submit.svg);
+background-image: url(../img/submit.svg);
 background-size: contain;
 background-repeat: no-repeat;
 align-items: center;
